@@ -10,9 +10,9 @@
 </head>
 <body>
     <div id="app">
-    <input type="text" v-on:input="changeTitle">
-    <p>{{ title }}</p>
+        <h1 v-once>{{ title }}</h1>
+        <p>{{ sayHello() }} - <a v-bind:href="link">Huy Hà</a></p>
     </div>
-    <script src="HelloWorld.js"></script>
+    <script src="myapp.js"></script>
 </body>
 </html>
