@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dynamic Styling with CSS classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="DynamicStyling.css" />
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Setting styles Dynamically with CSS classes -->
+        <p>Setting styles Dynamically with CSS classes</p>
+        <div 
+            class="demo" 
+            @click="attachColor = !attachColor"
+            :class="divClasses1"></div>
+        <div class="demo" :class="divClasses2"></div>
+        <div class="demo" :class="divClasses3"></div>
+        <hr>
+        <div class="demo" :class="[color1, {red: attachColor}]"></div>
+        <input type="text" v-model="color1">
+        <hr>
+        <!-- Setting styles Dynamically without CSS classes -->
+        <p>Setting styles Dynamically without CSS classes</p>
+        <div class="demo" :style="{backgroundColor: color2}"></div>
+        <div class="demo" :style="myStyle"></div>
+        <input type="text" v-model="color2">
+        <input type="text" v-model="width">
+    </div>
+    <script src="DynamicStyling.js"></script>
+</body>
+</html>
